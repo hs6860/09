@@ -5,20 +5,21 @@
 
 int main(int argc, char *argv[]) {
 	
-	int i, average;
-	int sum=0;
-	int grade[5];
+	int i;
+	int SIZE = 5;
+	int grade[SIZE];
+	int score[SIZE];
 	
+	for(i=0;i<SIZE;i++){
+		grade[i] = rand()%100+1;
+		
+	}
 	for(i=0;i<SIZE;i++)
 	{
-		printf("enter the student's score : ");
-		scanf("%d",&grade[i]);
-		sum += grade[i];
-	
+		score[i] = grade[i];
 	}
 	
-	average = sum/SIZE;
-	printf("the average of students' score is : %d\n",average);
-	
+	for(i=0;i<SIZE;i++)
+		printf("score[%d] %i (%i)\n",i,score[i],grade[i]);	
 	return 0;
 }
